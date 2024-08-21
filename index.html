@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
         }
         header {
             background-color: #003366;
-            color: #fff;
+            color: #f0f0f0; /* Lightened color for better visibility */
             padding: 2rem 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -25,8 +26,9 @@
             margin-bottom: 0.5rem;
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin: 0;
+            color: #e0e0e0; /* Lightened further for readability */
         }
         nav {
             text-align: center;
@@ -67,23 +69,29 @@
             list-style-type: square;
         }
         .experience {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-gap: 1rem;
-            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
             border-bottom: 1px solid #ddd;
         }
         .experience:last-child {
             border-bottom: none;
         }
-        .experience h3 {
-            font-size: 1.4rem;
+        .experience h3, .experience .position {
+            font-size: 1.1rem; /* Adjusted font size */
             color: #003366;
             margin-bottom: 0.2rem;
         }
-        .experience .company, .experience .duration {
-            font-size: 0.9rem;
+        .experience .company {
+            font-size: 1rem;
+            color: #555;
+        }
+        .experience .duration {
+            font-size: 0.9rem; /* Adjusted font size */
             color: #777;
+            text-align: right; /* Align duration to the right */
         }
         footer {
             text-align: center;
@@ -134,49 +142,49 @@
         <div class="experience">
             <div>
                 <h3>Quantitative Research Intern</h3>
-                <p class="company">China Credit Finance Co. Ltd., Beijing, China</p>
+                <p class="company">China Credit Finance Co. Ltd.</p>
             </div>
-            <p class="duration">May 2024 – Present</p>
+            <p class="duration">Beijing, China | May 2024 – Present</p>
         </div>
 
         <div class="experience">
             <div>
                 <h3>Summer Researcher</h3>
-                <p class="company">UK-China (Guangdong) CCUS Centre, Guangzhou, China</p>
+                <p class="company">UK-China (Guangdong) CCUS Centre</p>
             </div>
-            <p class="duration">July 2024 – August 2024</p>
+            <p class="duration">Guangzhou, China | July 2024 – August 2024</p>
         </div>
 
         <div class="experience">
             <div>
                 <h3>Investment Intern, Portfolio Strategy</h3>
-                <p class="company">Allianz China Insurance Asset Management Company, Beijing, China</p>
+                <p class="company">Allianz China Insurance Asset Management Company</p>
             </div>
-            <p class="duration">October 2023 – December 2023</p>
+            <p class="duration">Beijing, China | October 2023 – December 2023</p>
         </div>
 
         <div class="experience">
             <div>
                 <h3>Summer Intern, Management & Execution</h3>
-                <p class="company">Invesco APAC, Shanghai, China</p>
+                <p class="company">Invesco APAC</p>
             </div>
-            <p class="duration">July 2023 – September 2023</p>
+            <p class="duration">Shanghai, China | July 2023 – September 2023</p>
         </div>
 
         <div class="experience">
             <div>
                 <h3>Investment Assistant, Fund 1</h3>
-                <p class="company">CMS Capital Co., Ltd., Beijing, China</p>
+                <p class="company">CMS Capital Co., Ltd.</p>
             </div>
-            <p class="duration">July 2021 – January 2022</p>
+            <p class="duration">Beijing, China | July 2021 – January 2022</p>
         </div>
 
         <div class="experience">
             <div>
                 <h3>Part-time Assistant</h3>
-                <p class="company">Boston Consulting Group, Beijing, China</p>
+                <p class="company">Boston Consulting Group</p>
             </div>
-            <p class="duration">June 2020 – February 2021</p>
+            <p class="duration">Beijing, China | June 2020 – February 2021</p>
         </div>
     </section>
 
@@ -193,13 +201,17 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: gaozhesi@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/%E5%96%86%E6%80%9D-%E9%AB%98-19711b171/" target="_blank">Gao Zhesi</a></p>
+        <p>LinkedIn: <a href="hhttps://www.linkedin.com/in/%E5%96%86%E6%80%9D-%E9%AB%98-19711b171/" target="_blank">Gao Zhesi</a></p>
     </section>
 </div>
 
 <footer>
-    <p>&copy; 2024 Gao Zhesi. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Gao Zhesi. All rights reserved.</p>
 </footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
