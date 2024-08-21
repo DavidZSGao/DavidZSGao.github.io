@@ -1,47 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD Candidate in Finance - Tsinghua University</title>
+    <title>Gao Zhesi - PhD Candidate in Finance</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
         header {
-            background-color: #004080;
+            background-color: #003366;
             color: #fff;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
         }
         nav {
             text-align: center;
             padding: 1rem;
-            background-color: #0059b3;
+            background-color: #004080;
+            margin-bottom: 2rem;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 1rem;
+            font-size: 1.1rem;
+            margin: 0 1.5rem;
+            font-weight: bold;
         }
         .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 1rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #003366;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #555;
+        }
+        ul {
+            padding-left: 1.2rem;
+            list-style-type: square;
+        }
+        .experience {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .experience:last-child {
+            border-bottom: none;
+        }
+        .experience h3 {
+            font-size: 1.4rem;
+            color: #003366;
+            margin-bottom: 0.2rem;
+        }
+        .experience .company, .experience .duration {
+            font-size: 0.9rem;
+            color: #777;
         }
         footer {
             text-align: center;
-            padding: 1rem 0;
-            background-color: #004080;
+            padding: 1.5rem 0;
+            background-color: #003366;
             color: #fff;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -81,23 +130,54 @@
 
     <section id="experience">
         <h2>Experience</h2>
-        <h3>Quantitative Research Intern</h3>
-        <p>China Credit Finance Co. Ltd., Beijing, China. May 2024 – Present</p>
 
-        <h3>Summer Researcher, Green Finance</h3>
-        <p>UK-China (Guangdong) CCUS Centre, Guangzhou, China. July 2024 – August 2024</p>
+        <div class="experience">
+            <div>
+                <h3>Quantitative Research Intern</h3>
+                <p class="company">China Credit Finance Co. Ltd., Beijing, China</p>
+            </div>
+            <p class="duration">May 2024 – Present</p>
+        </div>
 
-        <h3>Investment Intern, Portfolio Strategy</h3>
-        <p>Allianz China Insurance Asset Management Company, Beijing, China. October 2023 – December 2023</p>
+        <div class="experience">
+            <div>
+                <h3>Summer Researcher</h3>
+                <p class="company">UK-China (Guangdong) CCUS Centre, Guangzhou, China</p>
+            </div>
+            <p class="duration">July 2024 – August 2024</p>
+        </div>
 
-        <h3>Summer Intern, Management & Execution</h3>
-        <p>Invesco APAC, Shanghai, China. July 2023 – September 2023</p>
+        <div class="experience">
+            <div>
+                <h3>Investment Intern, Portfolio Strategy</h3>
+                <p class="company">Allianz China Insurance Asset Management Company, Beijing, China</p>
+            </div>
+            <p class="duration">October 2023 – December 2023</p>
+        </div>
 
-        <h3>Investment Assistant, Fund 1</h3>
-        <p>CMS Capital Co., Ltd., Beijing, China. July 2021 – January 2022</p>
+        <div class="experience">
+            <div>
+                <h3>Summer Intern, Management & Execution</h3>
+                <p class="company">Invesco APAC, Shanghai, China</p>
+            </div>
+            <p class="duration">July 2023 – September 2023</p>
+        </div>
 
-        <h3>Part-time Assistant</h3>
-        <p>Boston Consulting Group, Beijing, China. June 2020 – February 2021</p>
+        <div class="experience">
+            <div>
+                <h3>Investment Assistant, Fund 1</h3>
+                <p class="company">CMS Capital Co., Ltd., Beijing, China</p>
+            </div>
+            <p class="duration">July 2021 – January 2022</p>
+        </div>
+
+        <div class="experience">
+            <div>
+                <h3>Part-time Assistant</h3>
+                <p class="company">Boston Consulting Group, Beijing, China</p>
+            </div>
+            <p class="duration">June 2020 – February 2021</p>
+        </div>
     </section>
 
     <section id="teaching">
@@ -113,7 +193,7 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: gaozhesi@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/%E5%96%86%E6%80%9D-%E9%AB%98-19711b171/">Gao Zhesi</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/%E5%96%86%E6%80%9D-%E9%AB%98-19711b171/" target="_blank">Gao Zhesi</a></p>
     </section>
 </div>
 
