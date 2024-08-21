@@ -45,12 +45,10 @@
         }
         .container {
             max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            margin: 2rem auto; /* Add margin to top */
+            padding: 2rem 2rem; /* Add padding to top and bottom */
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding-bottom: 0.01rem; /* Add extra padding to the bottom */
-            padding-top: 0.0005rem; /* Increase the top margin */
         }
         section {
             margin-bottom: 2rem;
@@ -72,17 +70,13 @@
         }
         .experience {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             padding: 0.5rem 0;
             border-bottom: 1px solid #ddd;
         }
-        .experience:last-child {
-            border-bottom: none;
-        }
         .experience h3, .experience .position {
-            font-size: 1.1rem; /* Adjusted font size */
+            font-size: 1.1rem;
             color: #003366;
             margin-bottom: 0.2rem;
         }
@@ -91,15 +85,19 @@
             color: #555;
         }
         .experience .duration {
-            font-size: 0.9rem; /* Adjusted font size */
+            text-align: right;
+            font-size: 0.9rem;
             color: #777;
-            text-align: right; /* Align duration to the right */
+            display: block;
+        }
+        .experience .duration .location {
+            margin-bottom: 0.3rem;
         }
         footer {
             text-align: center;
             padding: 1.5rem 0;
             background-color: #003366; /* Lighter background for better text contrast */
-            color: #ffffff !important; /* Ensure white color with important flag */
+            color: #ffffff;
             margin-top: 2rem;
         }
     </style>
@@ -146,7 +144,10 @@
                 <h3>Quantitative Research Intern</h3>
                 <p class="company">China Credit Finance Co. Ltd.</p>
             </div>
-            <p class="duration">Beijing, China | May 2024 – Present</p>
+            <div class="duration">
+                <p class="location">Beijing, China</p>
+                <p>May 2024 – Present</p>
+            </div>
         </div>
 
         <div class="experience">
@@ -154,7 +155,10 @@
                 <h3>Summer Researcher</h3>
                 <p class="company">UK-China (Guangdong) CCUS Centre</p>
             </div>
-            <p class="duration">Guangzhou, China | July 2024 – August 2024</p>
+            <div class="duration">
+                <p class="location">Guangzhou, China</p>
+                <p>July 2024 – August 2024</p>
+            </div>
         </div>
 
         <div class="experience">
@@ -162,7 +166,10 @@
                 <h3>Investment Intern, Portfolio Strategy</h3>
                 <p class="company">Allianz China Insurance Asset Management Company</p>
             </div>
-            <p class="duration">Beijing, China | October 2023 – December 2023</p>
+            <div class="duration">
+                <p class="location">Beijing, China</p>
+                <p>October 2023 – December 2023</p>
+            </div>
         </div>
 
         <div class="experience">
@@ -170,7 +177,10 @@
                 <h3>Summer Intern, Management & Execution</h3>
                 <p class="company">Invesco APAC</p>
             </div>
-            <p class="duration">Shanghai, China | July 2023 – September 2023</p>
+            <div class="duration">
+                <p class="location">Shanghai, China</p>
+                <p>July 2023 – September 2023</p>
+            </div>
         </div>
 
         <div class="experience">
@@ -178,7 +188,10 @@
                 <h3>Investment Assistant, Fund 1</h3>
                 <p class="company">CMS Capital Co., Ltd.</p>
             </div>
-            <p class="duration">Beijing, China | July 2021 – January 2022</p>
+            <div class="duration">
+                <p class="location">Beijing, China</p>
+                <p>July 2021 – January 2022</p>
+            </div>
         </div>
 
         <div class="experience">
@@ -186,7 +199,10 @@
                 <h3>Part-time Assistant</h3>
                 <p class="company">Boston Consulting Group</p>
             </div>
-            <p class="duration">Beijing, China | June 2020 – February 2021</p>
+            <div class="duration">
+                <p class="location">Beijing, China</p>
+                <p>June 2020 – February 2021</p>
+            </div>
         </div>
     </section>
 
@@ -207,13 +223,4 @@
     </section>
 </div>
 
-<footer style="text-align: center; padding: 1.5rem 0; background-color: #003366; color: #ffffff;">
-    <p style="color: #e0e0e0;">&copy; <span id="year"></span> Gao Zhesi. All rights reserved.</p>
-</footer>
-
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+<footer
