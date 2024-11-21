@@ -100,6 +100,41 @@
             color: #ffffff;
             margin-top: 2rem;
         }
+        #search-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    
+        .search_formats {
+            display: flex;
+            gap: 10px;
+        }
+    
+        #search-format {
+            padding: 5px;
+            font-size: 1rem;
+        }
+    
+        #search {
+            padding: 5px;
+            font-size: 1rem;
+            width: 300px;
+        }
+    
+        .search_submit {
+            padding: 5px 15px;
+            font-size: 1rem;
+            background-color: #003366;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    
+        .search_submit:hover {
+            background-color: #002244;
+        }
     </style>
 </head>
 <body>
@@ -221,6 +256,32 @@
         <p>Email: gaozhesi@gmail.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/%E5%96%86%E6%80%9D-%E9%AB%98-19711b171/" target="_blank">Gao Zhesi</a></p>
     </section>
+    
+    <section id="search">
+        <h2>Search Congress.gov</h2>
+        <form method="get" target="_top" role="search" action="https://congress.gov/search">
+            <div id="search-wrapper" class="search_wrapper">
+                <div class="search_formats">
+                    <select id="search-format" name="search-source">
+                        <optgroup label="Search by Congress">
+                            <option value="current-congress">Current Congress</option>
+                            <option value="all-congresses">All Congresses</option>
+                        </optgroup>
+                        <optgroup label="Search by Source">
+                            <option value="legislation">Legislation</option>
+                            <option value="committee-materials">Committee Materials</option>
+                            <option value="congrecord">Congressional Record</option>
+                            <option value="members">Members</option>
+                            <option value="nominations">Nominations</option>
+                        </optgroup>
+                    </select>
+                    <input id="search" type="text" class="locsuggest" name="q" placeholder="Examples: hr5, sres9, 'health care'" value="">
+                    <button class="search_submit" id="search-submit" type="submit">GO</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
 </div>
 
 <footer
