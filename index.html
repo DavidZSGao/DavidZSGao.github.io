@@ -100,31 +100,28 @@
             color: #ffffff;
             margin-top: 2rem;
         }
-        /* Center the search section in the middle of the page */
-        #search-container {
+        /* Center the search section independently */
+        #search {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh; /* Full viewport height */
-            background-color: #f9f9f9; /* Match your page's background */
-            text-align: center; /* Center the text horizontally */
+            text-align: center;
+            background-color: #f9f9f9; /* Optional: Matches page background */
+            margin: 0; /* Remove default margins */
         }
-
+    
         #search h2 {
             margin-bottom: 20px;
-            font-size: 1.5rem;
-            color: #003366; /* Match the theme of your website */
+            font-size: 1.8rem;
+            color: #003366; /* Matches theme */
         }
 
         #search-wrapper {
             display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        .search_formats {
-            display: flex;
-            gap: 10px; /* Add spacing between input elements */
+            flex-direction: row;
+            gap: 10px; /* Add space between elements */
         }
     
         #search-format {
@@ -132,7 +129,7 @@
             font-size: 1rem;
         }
     
-        #search {
+        #search-input {
             padding: 8px;
             font-size: 1rem;
             width: 300px;
