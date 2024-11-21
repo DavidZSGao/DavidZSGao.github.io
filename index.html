@@ -100,31 +100,46 @@
             color: #ffffff;
             margin-top: 2rem;
         }
+        /* Center the search section in the middle of the page */
+        #search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: #f9f9f9; /* Match your page's background */
+            text-align: center; /* Center the text horizontally */
+        }
+
+        #search h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #003366; /* Match the theme of your website */
+        }
+
         #search-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 20px;
         }
     
         .search_formats {
             display: flex;
-            gap: 10px;
+            gap: 10px; /* Add spacing between input elements */
         }
     
         #search-format {
-            padding: 5px;
+            padding: 8px;
             font-size: 1rem;
         }
     
         #search {
-            padding: 5px;
+            padding: 8px;
             font-size: 1rem;
             width: 300px;
         }
     
         .search_submit {
-            padding: 5px 15px;
+            padding: 8px 15px;
             font-size: 1rem;
             background-color: #003366;
             color: white;
