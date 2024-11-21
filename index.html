@@ -100,18 +100,19 @@
             color: #ffffff;
             margin-top: 2rem;
         }
-        /* Center the search section independently */
+        /* Center the search section with a smaller background box */
         #search {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full viewport height */
+            min-height: 30vh; /* Make the section height proportional to content */
             text-align: center;
             background-color: #f9f9f9; /* Optional: Matches page background */
-            margin: 0; /* Remove default margins */
+            margin: 0; /* Remove extra margins */
+            padding: 20px; /* Add padding for spacing */
         }
-    
+
         #search h2 {
             margin-bottom: 20px;
             font-size: 1.8rem;
@@ -123,18 +124,18 @@
             flex-direction: row;
             gap: 10px; /* Add space between elements */
         }
-    
+
         #search-format {
             padding: 8px;
             font-size: 1rem;
         }
-    
+
         #search-input {
             padding: 8px;
             font-size: 1rem;
             width: 300px;
         }
-    
+
         .search_submit {
             padding: 8px 15px;
             font-size: 1rem;
@@ -143,7 +144,7 @@
             border: none;
             cursor: pointer;
         }
-    
+
         .search_submit:hover {
             background-color: #002244;
         }
@@ -270,7 +271,7 @@
     </section>
     
     <section id="search">
-        <h2>Search Congress.gov</h2>
+        <h2>Useful Link: Search Congress.gov</h2>
         <form method="get" target="_top" role="search" action="https://congress.gov/search">
             <div id="search-wrapper" class="search_wrapper">
                 <div class="search_formats">
@@ -287,7 +288,7 @@
                             <option value="nominations">Nominations</option>
                         </optgroup>
                     </select>
-                    <input id="search" type="text" class="locsuggest" name="q" placeholder="Examples: hr5, sres9, 'health care'" value="">
+                    <input id="search-input" type="text" class="locsuggest" name="q" placeholder="Examples: hr5, sres9, 'health care'" value="">
                     <button class="search_submit" id="search-submit" type="submit">GO</button>
                 </div>
             </div>
